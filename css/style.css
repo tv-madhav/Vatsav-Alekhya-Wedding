@@ -99,13 +99,14 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .fh5co-nav #fh5co-logo {
-  font-size: 20px; /* Reduced font size */
+  font-size: 20px; /* Adjust font size as needed */
   margin: 0;
   padding: 0;
-  line-height: 20px; /* Adjusted line height to match the font size */
-  font-family: "Noto Sans Telugu", "NTR", Arial, sans-serif; /* Updated font family to match Telugu text */
-  white-space: nowrap; /* Keeps text on one line */
-  color: #fff; /* Ensure text color is white */
+  line-height: 20px; /* Adjust line height to match font size */
+  font-family: "Noto Sans Telugu", Arial, sans-serif; /* Use Telugu-compatible font */
+  white-space: nowrap; /* Keeps the text in one line */
+  overflow: hidden; /* Optional: Hides overflow */
+  text-overflow: ellipsis; /* Optional: Adds ellipsis for overflow */
 }
 
 .fh5co-nav a {
