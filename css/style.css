@@ -98,11 +98,13 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
   }
 }
-nav.fh5co-nav #fh5co-logo a {
-  font-size: 20px; /* Adjust font size */
+.fh5co-nav #fh5co-logo {
+  font-size: 16px; /* Adjust font size */
+  margin: 0;
+  padding: 5px 0; /* Add vertical padding */
+  line-height: 1.2; /* Adjust line height for better spacing */
   font-family: "Noto Sans Telugu", Arial, sans-serif; /* Use a Telugu-compatible font */
   white-space: nowrap; /* Keep text on one line */
-  line-height: 20px; /* Adjust line height */
 }
 .fh5co-nav a {
   padding: 5px 10px;
