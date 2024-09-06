@@ -98,16 +98,21 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
   }
 }
-.fh5co-nav #fh5co-logo
-@media screen and (max-width: 768px) {
-  .fh5co-nav .menu-1, .fh5co-nav .menu-2 {
-    display: none;
-  }
-}
-.fh5co-nav ul {
+.fh5co-nav #fh5co-logo {
+  font-size: 20px; /* Reduced font size */
+  margin: 0;
   padding: 0;
-  margin: 2px 0 0 0;
+  line-height: 20px; /* Adjusted line height to match the font size */
+  font-family: "Noto Sans Telugu", "NTR", Arial, sans-serif; /* Updated font family to match Telugu text */
+  white-space: nowrap; /* Keeps text on one line */
+  color: #fff; /* Ensure text color is white */
 }
+
+.fh5co-nav a {
+  padding: 5px 10px;
+  color: #fff;
+}
+
 .fh5co-nav ul li {
   padding: 0;
   margin: 0;
