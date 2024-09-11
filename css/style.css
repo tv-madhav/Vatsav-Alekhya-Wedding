@@ -826,36 +826,43 @@ form label {
   font-weight: normal !important;
 }
 
+/* Header container styling */
 #fh5co-header .container {
   position: relative;
-  left: 10%; /* Adjust this value to move the content to the right */
+  display: flex; /* Use Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  padding: 0 15px; /* Add padding for small screens */
+  text-align: center; /* Center text */
 }
 
+/* Display table-cell adjustments */
 #fh5co-header .display-tc {
-  display: table-cell !important;
-  vertical-align: middle;
-  padding-left: 0; /* Reset padding if it was set */
-  transform: translateX(10%); /* Fine-tune the content's position */
+  display: block; /* Change to block for Flexbox compatibility */
+  padding: 0; /* Remove any padding */
+  transform: none; /* Remove transform */
 }
 
-/* Adjust font sizes and colors as needed */
+/* Adjust font sizes and colors */
 #fh5co-header .display-tc h1 {
-  margin-bottom: 0px;
-  font-size: 60px; /* Reduced font size */
+  margin-bottom: 10px;
+  font-size: 60px; /* Base font size */
   line-height: 1.2;
   font-family: "Sacramento", Arial, serif;
   white-space: nowrap; /* Keeps names on one line */
   color: white; /* Ensure text color is white */
 }
 
+/* Subtitle styling */
 #fh5co-header .display-tc h2 {
-  font-size: 18px; /* Reduced font size */
+  font-size: 18px; /* Base font size */
   line-height: 1.4;
   margin-bottom: 30px;
   color: white; /* Ensure text color is white */
 }
 
-/* Ensure the countdown circles are aligned on the same line */
+/* Countdown alignment */
 .simply-countdown-one {
   display: flex; /* Keeps countdown circles in a row */
   justify-content: center; /* Centers the countdown */
@@ -868,42 +875,42 @@ form label {
   font-size: 14px; /* Adjust button font size */
   background: white; /* Button background */
   color: #F14E95; /* Button text color */
-  border: none !important;
+  border: none;
   text-transform: uppercase;
   transition: background 0.3s ease; /* Smooth hover transition */
 }
 
 #fh5co-header .display-tc .btn:hover {
   background: #f0f0f0; /* Button hover effect */
-  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important; /* Subtle shadow */
+  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75); /* Subtle shadow */
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   #fh5co-header .container {
-    left: 5%; /* Adjust padding for smaller screens */
+      padding: 0 10px; /* Reduce padding on smaller screens */
   }
 
   #fh5co-header .display-tc h1 {
-    font-size: 40px; /* Adjust font size for tablets */
+      font-size: 40px; /* Smaller font size for tablets */
   }
 
   #fh5co-header .display-tc h2 {
-    font-size: 16px; /* Adjust font size for tablets */
+      font-size: 16px; /* Smaller font size for tablets */
   }
 }
 
 @media screen and (max-width: 480px) {
   #fh5co-header .container {
-    left: 0; /* Reset position for mobile */
+      padding: 0 5px; /* Reduce padding further on mobile */
   }
 
   #fh5co-header .display-tc h1 {
-    font-size: 30px; /* Further reduced for mobile */
+      font-size: 30px; /* Smaller font size for mobile */
   }
 
   #fh5co-header .display-tc h2 {
-    font-size: 14px; /* Further reduced for mobile */
+      font-size: 14px; /* Smaller font size for mobile */
   }
 }
 
@@ -1028,6 +1035,189 @@ form label {
   #fh5co-gallery,
   .fh5co-section {
     padding: 3em 0;
+  }
+}
+
+/* Background and Overlay */
+#fh5co-started {
+  position: relative;
+  padding: 50px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#fh5co-started .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Container Styling */
+#fh5co-started .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+/* Heading Styling */
+.fh5co-heading {
+  margin-bottom: 30px;
+}
+
+.fh5co-heading h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.fh5co-heading p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+/* Form Styling */
+form.form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+/* Button Styling */
+.btn {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e54e4e;
+  color: #fff;
+}
+
+/* Popup Modal Styles */
+.popup-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Button Styling */
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-yes {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.btn-yes:hover {
+  background-color: #45a049;
+}
+
+.btn-no {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.btn-no:hover {
+  background-color: #e41e1e;
+}
+
+/* Event-specific Pop-up Colors */
+.popup-content.mehendi {
+  color: #6B8E23; /* Light Green */
+}
+
+.popup-content.haldi {
+  color: #FFD700; /* Light Yellow */
+}
+
+.popup-content.sangeet {
+  color: #D4AF37; /* Blackish Gold */
+}
+
+.popup-content.wedding {
+  color: #8B0000; /* Green and Red Mix (Dark Red) */
+}
+
+.popup-content.vratam {
+  color: #FFA500; /* Orange */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-inline .form-group {
+      width: 100%;
   }
 }
 
