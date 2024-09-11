@@ -9,6 +9,8 @@
 	<title> శ్రీ-Vatsav Alekhya'ల కల్యాణ వేడుక &mdash; Wedding Invitation</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Wedding Invitation Please RSVP" />
+>
+
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -38,6 +40,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/rsvp.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -171,7 +174,7 @@
 									<span>Wednesday 9</span>
 									<span>October, 2024</span>
 								</div>
-								<p>Get ready for the Mehandi ceremony, where laughter and intricate henna designs set the tone for our celebrations!</p>
+								<p>Get ready for the Mehandi ceremony, where laughter and Joy set the tone for our celebrations!</p>
 							</div>
 	
 							<!-- Pelli Koduku & Pelli Kuthuru Event -->
@@ -335,67 +338,75 @@
 		</div>
 	</div>
 
-	
-	<div id="fh5co-started" class="fh5co-bg" style="background-image:url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
+    <div id="rsvp-section" class="rsvp-bg" style="background-image:url(images/img_bg_4.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-8 col-md-offset-2 text-center rsvp-heading">
+                    <h2>Are You Attending?</h2>
+                    <p>Please fill up the form to notify us that you're attending. Thanks.</p>
+                </div>
+            </div>
+            <div class="row animate-box">
+                <div class="col-md-10 col-md-offset-1">
+                    <form id="rsvpForm" action="https://formspree.io/f/mldrvwyo" method="POST" class="form-inline">
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="_replyto" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <button type="button" class="btn btn-default btn-block" onclick="openRSVPPopup()">Send RSVP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Single Pop-up Modal with All Events -->
+    <div id="rsvpModal" class="rsvp-modal">
+        <div class="rsvp-content" id="rsvpContent">
+            <span class="close-btn" onclick="closeRSVPPopup()">&times;</span>
+            <h3>Are you attending the following events?</h3>
+            <div id="eventsList">
+                <!-- Events will be dynamically populated here -->
+            </div>
+            <button class="btn btn-submit" onclick="submitRSVPForm()">Submit Responses</button>
+        </div>
+    </div>
+	<div id="fh5co-countdown" class="fh5co-section-gray">
 		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Are You Attending?</h2>
-					<p>Please fill up the form to notify us that you're attending. Thanks.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<form action="https://formspree.io/f/mldrvwyo" method="POST" class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<input type="text" class="form-control" name="name" placeholder="Your Name" required>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<input type="email" class="form-control" name="_replyto" placeholder="Your Email" required>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Send RSVP</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<span>Countdown to the Big Day</span>
+					<h2>Wedding Day</h2>
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 	
-	<!-- jQuery -->
+	<!-- jQuery should be first -->
 	<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
+	<!-- Other dependent libraries -->
 	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
 	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
 	<script src="js/jquery.countTo.js"></script>
-
-	<!-- Stellar -->
 	<script src="js/jquery.stellar.min.js"></script>
-	<!-- Magnific Popup -->
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
-
-	<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
 	<script src="js/simplyCountdown.js"></script>
-	<!-- Main -->
+	<!-- Main JavaScript file where your custom scripts are -->
 	<script src="js/main.js"></script>
+	<script src="js/rsvp.js"></script> <!-- Link your RSVP JavaScript file -->
 
-	<script>
+<script>
     // Set the countdown target date to October 12th of the current year
 var today = new Date();
 var targetYear = today.getFullYear();
