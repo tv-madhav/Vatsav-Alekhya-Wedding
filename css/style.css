@@ -1300,6 +1300,7 @@ form.form-inline {
     width: 120px;
     height: 120px;
     margin: 0 auto;
+    object-fit: cover;
   }
 }
 .couple-half .groom {
@@ -2220,6 +2221,5 @@ form.form-inline {
       font-size: 14px; /* Smaller text for mobile */
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
