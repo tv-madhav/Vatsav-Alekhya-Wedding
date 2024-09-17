@@ -75,7 +75,19 @@
             form.appendChild(input);
         }
 
-        form.submit(); // Submit the form to Formspree
+        // Get the number of attendees from the input field
+        const attendeesInput = document.querySelector('input[name="attendees"]');
+        if (attendeesInput && attendeesInput.value) {
+            // Append the number of attendees as a hidden input
+            const attendeesCountInput = document.createElement('input');
+            attendeesCountInput.type = 'hidden';
+            attendeesCountInput.name = 'number_of_attendees';
+            attendeesCountInput.value = attendeesInput.value;
+            form.appendChild(attendeesCountInput);
+        }
+
+        // Submit the form to Formspree
+        form.submit();
     }
 
     // Attach the functions to the global window object to ensure accessibility
