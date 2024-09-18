@@ -298,52 +298,6 @@
             </div>
         </div>
 
-        <div id="rsvp-section" class="rsvp-bg" style="background-image:url(images/img_bg_4.jpg);">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row animate-box">
-                    <div class="col-md-8 col-md-offset-2 text-center rsvp-heading">
-                        <h2>Are You Attending?</h2>
-                        <p>Please fill up the form to notify us that you're attending. Thanks.</p>
-                    </div>
-                </div>
-                <div class="row animate-box">
-                    <div class="col-md-10 col-md-offset-1">
-                        <form id="rsvpForm" action="https://formspree.io/f/mldrvwyo" method="POST"
-                            class="form-inline">
-                            <div class="col-md-3 col-sm-4 form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="col-md-3 col-sm-4 form-group">
-                                <input type="email" class="form-control" name="_replyto" placeholder="Your Email"
-                                    required>
-                            </div>
-                            <div class="col-md-3 col-sm-4 form-group">
-                                <input type="number" class="form-control" name="attendees"
-                                    placeholder="Number of Attendees" min="1" max="20" required>
-                            </div>
-                            <div class="col-md-3 col-sm-4 form-group">
-                                <button type="button" class="btn btn-default btn-block"
-                                    onclick="openRSVPPopup()">Send RSVP</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Single Pop-up Modal with All Events -->
-        <div id="rsvpModal" class="rsvp-modal">
-            <div class="rsvp-content" id="rsvpContent">
-                <span class="close-btn" onclick="closeRSVPPopup()">&times;</span>
-                <h3>Are you attending the following events?</h3>
-                <div id="eventsList">
-                    <!-- Events will be dynamically populated here -->
-                </div>
-                <button class="btn btn-submit" onclick="submitRSVPForm()">Submit Responses</button>
-            </div>
-        </div>
-
         <!-- Address and Map Section -->
         <div class="address-map-section">
             <div class="address-container">
